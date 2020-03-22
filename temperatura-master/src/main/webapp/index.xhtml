@@ -28,6 +28,7 @@
             <h:outputText value="#{temperaturaBean.temperatura.convertida}" rendered="#{not empty temperaturaBean.temperatura.convertida}">
             	<f:convertNumber type="number" minFractionDigits="2" maxFractionDigits="2"/>              
             </h:outputText>
+	    <h:outputText value=" #{temperaturaBean.temperatura.converterPara}"></h:outputText>
         </h:form>
     </h:body>
 </html>
