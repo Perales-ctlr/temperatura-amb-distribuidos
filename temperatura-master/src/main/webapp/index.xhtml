@@ -11,7 +11,9 @@
             <h:panelGrid columns="2">
                 <h:outputLabel value="Temperatura:" for=" temperatura"/>
                 <h:inputText value="#{temperaturaBean.temperatura.temperatura}" id="temperatura"
-                             size="5"/>
+                             size="5" validatorMessage="Digite um valor entre -100 e 100!">
+					<f:validateLongRange minimum="-100" maximum="100"/>
+				</h:inputText>
                 <h:outputLabel value="Converter para:" for="converter"/>
                 <h:selectOneMenu value="#{temperaturaBean.temperatura.converterPara}" id="converter">
                     <f:selectItems value="#{temperaturaBean.temperaturas}"/>
