@@ -21,8 +21,9 @@
             </h:panelGrid>
             <h:commandButton value="Converter" action="#{temperaturaBean.converter}"/>
             <hr/>
-            <h:outputText value="#{temperaturaBean.temperatura.convertida} #{temperaturaBean.temperatura.converterPara}" 
-                          rendered="#{not empty temperaturaBean.temperatura.convertida}"/>
+            <h:outputText value="#{temperaturaBean.temperatura.convertida}" rendered="#{not empty temperaturaBean.temperatura.convertida}">
+            	<f:convertNumber type="number" minFractionDigits="2" maxFractionDigits="2"/>              
+            </h:outputText>
         </h:form>
     </h:body>
 </html>
